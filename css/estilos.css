@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta+Mahee:200,400');
+
+body { background: #189fe2; }
+* { box-sizing: border-box; }
+
+.container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.logot{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(253, 253, 253);
+  text-align: center;
+}
+
+.wrapper {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0, .1);
+  padding: 27.5px;
+}
+
+#contactForm {
+  display: grid;
+  grid-gap: 17px;
+  grid-template-areas:
+    'cpf'
+    'email'
+    'matricula'
+    'mes'
+    'retirada';
+}
+
+.required-field {
+  grid-column: 1 / 2;
+}
+
+
+
+.cpf-field {
+  grid-area: cpf;
+  grid-column: 2 / 3;
+}
+
+.email-field {
+  grid-area: email;
+  grid-column: 1 / 3;
+}
+
+.mes-field  {
+    grid-area: mes;
+    grid-column: 1 / 3;
+  }
+
+.matricula-field {
+  grid-area: matricula;
+  grid-column: 1 / 3;
+}
+
+
+
+
+.retirada-field {
+  grid-area: retirada;
+  grid-column: 1 / 3;
+}
+
+.submit-button {
+  grid-area: submit;
+  grid-column: 1 / 3;
+}
+
+/* FORM STYLES */
+
+.contact-us {
+  margin: 0 0 30px;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #5dc3f2;
+}
+
+.contact form {
+  border: 0;
+}
+
+.contact form label {
+  display: block;
+}
+
+.contact form p {
+  margin: 0;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+  color: rgb(2, 9, 15);
+}
+
+.contact form input, .contact form textarea {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  width: 100%;
+  padding: .4em .8em;
+  background: rgba(249, 250, 250, .5);
+  border: 1px solid rgba(74, 86, 96, .1);
+  border-radius: 2.5px;
+  outline-color: #5dc3f2;
+}
+
+.contact form button {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  background: #5dc3f2;
+  width: 90px;
+  height: 30px;
+  border: 0;
+  border-radius: 15px;
+}
+
+.submit-button {
+  font-size: 17px;
+  align-self: center;
+  justify-self: end;
+  background: #0b91da;
+  border-radius: 15px;
+  width: 100px;
+  
+  
+}
+
+.contact form button:hover, .contact form button:focus {
+  background: #49b0e7;
+  color: #fff;
+  outline: 0;
+  transition: background-color 0.3s ease-out;
+}
+
+.required-field {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-weight: 200;
+  font-size: 10px;
+  color: rgba(74, 86, 96, 0.75);
+  align-self: center;
+  justify-self: start;
+}
+
+span {
+  color: #5dc3f2;
+}
+
+.alert {
+  margin-bottom: 1em;
+  padding: 10px;
+  background: #49b0e7;
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2.5px;
+  display: none;
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 500px) {
+  #contactForm {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'cpf matricula'
+      'email phone'
+      'retirada mes';
+  }
+
+  .cpf-field {
+    grid-area: cpf;
+    grid-column: 1 / 2;
+  }
+
+  .email-field {
+    grid-area: email;
+    grid-column: 1 / 2;
+  }
+
+  .matricula-field {
+    grid-area: matricula;
+    grid-column: 2 / 3;
+  }
+
+  
+
+  .retirada-field {
+    grid-area: retirada;
+    grid-column: 1 / 3;
+  }
+
+  .mes-field  {
+    grid-area: mes;
+    grid-column: 2 / 3;
+  }
+}
